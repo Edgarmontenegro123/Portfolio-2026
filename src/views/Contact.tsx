@@ -25,6 +25,11 @@ export const Contact = () => {
                     text: t.contact.success
                 })
                 setForm({ name: '', email: '', message: '' })
+            } else {
+                setStatusMessage({
+                    type: 'error',
+                    text: t.contact.error
+                })
             }
         } catch (error) {
             setStatusMessage({
@@ -53,7 +58,7 @@ export const Contact = () => {
                 <div className='grid gap-12 lg:grid-cols-2 items-start'>
                     <div className='flex flex-col gap-5 bg-brand-text/5 p-6 rounded-2xl border border-brand-text/10'>
                         <h3 className='text-lg font-bold text-brand-text mb-2'>
-                            {language === 'es' ? 'Canales Directos' : 'Direct Channels'}
+                            {t.contact.channelsTitle}
                         </h3>
                         <a
                             href={contactConstants.whatsapp}
@@ -67,18 +72,6 @@ export const Contact = () => {
                             <div>
                                 <span className='block text-xs text-brand-secondary'>{language === 'es' ? 'Teléfono' : 'Phone'}</span>
                                 <span className='text-sm font-medium'>{contactConstants.phone}</span>
-                            </div>
-                        </a>
-                        <a
-                            href={contactConstants.mailRedirect}
-                            className='flex items-center gap-4 p-3 rounded-xl hover:bg-brand-text/5 text-brand-text transition-colors duration-200'
-                        >
-                            <svg className='w-6 h-6 text-brand-primary' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2}>
-                                <path strokeLinecap='round' strokeLinejoin='round' d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
-                            </svg>
-                            <div>
-                                <span className='block text-xs text-brand-secondary'>{language === 'es' ? 'Correo Electrónico' : 'Email Address'}</span>
-                                <span className='text-sm font-medium'>{contactConstants.email}</span>
                             </div>
                         </a>
                         <a
@@ -136,16 +129,6 @@ export const Contact = () => {
                                 <span className='text-sm'>{language === 'es' ? 'Descargar Currículum en PDF' : 'Download CV as PDF'}</span>
                             </div>
                         </a>
-                        <div className='flex items-center gap-4 p-3 text-brand-text'>
-                            <svg className='w-6 h-6 text-brand-secondary' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2}>
-                                <path strokeLinecap='round' strokeLinejoin='round' d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' />
-                                <path strokeLinecap='round' strokeLinejoin='round' d='M15 11a3 3 0 11-6 0 3 3 0 016 0z' />
-                            </svg>
-                            <div>
-                                <span className='block text-xs text-brand-secondary'>{language === 'es' ? 'Residencia' : 'Location'}</span>
-                                <span className='text-sm font-medium'>Buenos Aires, Argentina</span>
-                            </div>
-                        </div>
                     </div>
                     <form
                         onSubmit={handleSubmit}
