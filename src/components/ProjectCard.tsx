@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLanguage } from '../hooks/useLanguage'
 import type { Project } from '../types/project'
 
 interface ProjectCardProps {
@@ -6,6 +7,7 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
+    const { language } = useLanguage()
     const [isExpanded, setIsExpanded] = useState(false)
 
     return (
@@ -18,7 +20,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 />
                 <div className='flex flex-col'>
                     <span className='font-bold text-brand-text tracking-tight'>{project.title}</span>
-                    <span className='text-xs text-brand-secondary'>{project.date}</span>
+                    <span className='text-xs text-brand-secondary'>{project.date[language]}</span>
                 </div>
             </div>
             <div className='relative aspect-video bg-black/5 overflow-hidden border-b border-brand-text/5'>
@@ -61,7 +63,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                     isExpanded ? 'max-h-[500px] opacity-100 p-4 border-b border-brand-text/5' : 'max-h-0 opacity-0'
                 }`}>
                     <p className='text-sm text-brand-secondary leading-relaxed mb-4'>
-                        {project.description}
+                        {project.description[language]}
                     </p>
                     <div className='flex flex-col gap-1 mb-4 text-xs bg-brand-text/5 p-3 rounded-xl'>
                         <span className='text-brand-secondary'>Para realizarla se utilizaron tecnologías como:</span>
