@@ -1,11 +1,13 @@
 export interface Project {
+    id: number
+    avatar: string
     title: string
-    description: {
-        es: string
-        'en-GB': string
-    }
-    tags: string[]
-    githubUrl?: string
-    liveUrl?: string
-    isFeatured?: boolean
+    date: string
+    img: string
+    resume?: string
+    video: string
+    description: string
+    tech: string
+    deploy: string
+    gitHub: string
 }

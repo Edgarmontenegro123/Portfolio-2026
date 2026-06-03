@@ -1,6 +1,19 @@
 import { useLanguage } from '../hooks/useLanguage'
 import { getTranslation } from '../utils/translations'
+import { ProjectCard } from '../components/ProjectCard'
 import type { Project } from '../types/project'
+import LogoTaskMateEvolution from '../assets/Images/taskMateEvolutionLogo.png'
+import LogoQuizUp from '../assets/Images/quizUpLogo.png'
+import LogoClimApp from '../assets/Images/sunnyCloud.png'
+import LogoHealthier from '../assets/Images/healthier.png'
+import LogoTaskMate from '../assets/Images/tasksLogo.png'
+import LogoYoutube from '../assets/Images/youtubeLogo.png'
+import GifTaskMateEvolution from '../assets/Images/gifTaskMateEvolution.gif'
+import GifQuizUp from '../assets/Images/gifQuizUp.gif'
+import GifClimApp from '../assets/Images/gifClimApp.gif'
+import GifHealthier from '../assets/Images/gifHealthier.gif'
+import GifTaskMate from '../assets/Images/gifTaskMate.gif'
+import GifYoutubeChallenge from '../assets/Images/gifYoutubeChallenge.gif'
 
 export const Projects = () => {
     const { language } = useLanguage()
@@ -8,35 +21,76 @@ export const Projects = () => {
 
     const projectsData: Project[] = [
         {
-            title: 'Basket Stats Dashboard',
-            description: {
-                es: 'Panel de control interactivo para el seguimiento de estadísticas de baloncesto, conectado a microservicios eficientes.',
-                'en-GB': 'Interactive control panel for tracking basketball statistics, connected to efficient microservices.'
-            },
-            tags: ['React', 'TypeScript', 'Tailwind', 'Vercel'],
-            githubUrl: 'https://github.com',
-            liveUrl: 'https://vercel.app',
-            isFeatured: true
+            id: 0,
+            avatar: LogoTaskMateEvolution,
+            title: 'Task Mate Evolution!',
+            date: language === 'es' ? 'Octubre 2025' : 'October 2025',
+            img: GifTaskMateEvolution,
+            video: 'https://vimeo.com/manage/videos/1135584450',
+            description: 'Task Mate Evolution es una aplicación móvil desarrollada con React Native (Expo) y TypeScript, diseñada como un gestor inteligente de tareas y notas, combinando texto y grabaciones de voz dentro de una interfaz moderna, minimalista y fluida. Próximamente en Google Play y AppStore',
+            tech: 'TypeScript, React Native, Expo SDH 54',
+            deploy: 'https://task-mate-by-montenegro.vercel.app/',
+            gitHub: 'https://github.com/Edgarmontenegro123/task-mate-evolution'
         },
         {
-            title: 'Basket Stats Management API',
-            description: {
-                es: 'Servicio backend robusto desarrollado en Go enfocado en la gestión, persistencia y lógica de negocio del sistema.',
-                'en-GB': 'Robust backend service developed in Go focused on system management, persistence, and business logic.'
-            },
-            tags: ['Go', 'Microservices', 'REST API'],
-            githubUrl: 'https://github.com',
-            isFeatured: false
+            id: 1,
+            avatar: LogoQuizUp,
+            title: 'QuizUp!',
+            date: language === 'es' ? 'Septiembre 2024' : 'September 2024',
+            img: GifQuizUp,
+            video: 'https://vimeo.com/manage/videos/1010081429',
+            description: 'Es un juego de trivia que permite a los usuarios responder preguntas, escoger entre muchísimas categorías y elegir la dificultad para jugar!',
+            tech: 'TypeScript, React, NextJs, Tailwind, Swiper, ESLint, Prettier, Jest, React Testing Library',
+            deploy: 'https://quizup-by-montenegro.vercel.app/',
+            gitHub: 'https://github.com/Edgarmontenegro123/quizup'
         },
         {
-            title: 'Basket Stats Analytics API',
-            description: {
-                es: 'Servicio independiente en Go diseñado para el procesamiento de datos complejos y métricas de rendimiento deportivo.',
-                'en-GB': 'Independent Go service designed for processing complex data and sports performance metrics.'
-            },
-            tags: ['Go', 'Analytics', 'Performance'],
-            githubUrl: 'https://github.com',
-            isFeatured: false
+            id: 4,
+            avatar: LogoHealthier,
+            title: 'Healthier',
+            date: language === 'es' ? 'Agosto 2021' : 'August 2021',
+            img: GifHealthier,
+            video: 'https://vimeo.com/manage/videos/586633960',
+            description: 'Con una interfaz muy intuitiva, que permite comprar productos saludables, ordenarlos por precio, por categoría, incluirlos en una wishlist o llevarlos a un carrito de compra donde se permite terminar el proceso de compra mediante una pasarela de pagos.',
+            tech: 'React, Redux, Material UI, NodeJS, PostgreSQL',
+            deploy: 'https://Healthier.vercel.app',
+            gitHub: 'https://github.com/Healthier-Group/Healthier'
+        },
+        {
+            id: 3,
+            avatar: LogoClimApp,
+            title: 'ClimApp',
+            date: language === 'es' ? 'Marzo 2021' : 'March 2021',
+            img: GifClimApp,
+            video: 'https://vimeo.com/manage/videos/586698718',
+            description: 'Esta es una App con una interfaz amigable, que muestra la hora y la fecha detallada del lugar donde te encuentres, con un buscador intuitivo, para que elijas tus ciudades favoritas y en ellas puedas observar los datos climáticos más relevantes.',
+            tech: 'JavaScript, React, Material UI, HTML5, CSS3',
+            deploy: 'https://climappmontenegro.vercel.app',
+            gitHub: 'https://github.com/Edgarmontenegro123/ClimApp'
+        },
+        {
+            id: 2,
+            avatar: LogoTaskMate,
+            title: 'Task Mate',
+            date: language === 'es' ? 'Septiembre 2024' : 'September 2024',
+            img: GifTaskMate,
+            video: 'https://vimeo.com/manage/videos/1010457455',
+            description: 'Esta es una App con una interfaz amigable, que permite agregar notas o tareas, modificarlas, separarlas por colores, organizarlas con un simple arrastre, eliminar las tareas completadas y guardarlas en tu dispositivo entre otras funcionalidades.',
+            tech: 'Typescript, React, NextJs, Tailwind, HTML5, CSS3',
+            deploy: 'https://task-mate-by-montenegro.vercel.app/',
+            gitHub: 'https://github.com/Edgarmontenegro123/task-mate'
+        },
+        {
+            id: 5,
+            avatar: LogoYoutube,
+            title: 'Youtube-Challenge',
+            date: language === 'es' ? 'Noviembre 2023' : 'November 2023',
+            img: GifYoutubeChallenge,
+            video: 'https://vimeo.com/manage/videos/586698718',
+            description: 'Esta es una App con una interfaz amigable, que permite ingresar una URL de Youtube en un buscador intuitivo, que trae el título del video, la cantidad de views y sus comentarios.',
+            tech: 'JavaScript, React, Sass, HTML5, CSS3, Youtube API, Express',
+            deploy: 'https://challenge-youtube.vercel.app/',
+            gitHub: 'https://github.com/Edgarmontenegro123/challenge-youtube'
         }
     ]
 
@@ -54,64 +108,11 @@ export const Projects = () => {
                         {t.projects.subtitle}
                     </p>
                 </div>
+
+                {/* Grilla responsiva de tarjetas con acordeón */}
                 <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-                    {projectsData.map((project, index) => (
-                        <article
-                            key={index}
-                            className={`flex flex-col justify-between p-6 rounded-2xl bg-brand-bg border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
-                                project.isFeatured
-                                    ? 'border-brand-primary/40 shadow-md shadow-brand-primary/5 ring-1 ring-brand-primary/10'
-                                    : 'border-brand-text/10 hover:border-brand-text/20'
-                            }`}
-                        >
-                            <div>
-                                {project.isFeatured && (
-                                    <span className='inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-primary mb-4'>
-                    {language === 'es' ? 'Destacado' : 'Featured'}
-                  </span>
-                                )}
-                                <h3 className='text-xl font-bold text-brand-text tracking-tight mb-2'>
-                                    {project.title}
-                                </h3>
-                                <p className='text-sm text-brand-secondary leading-relaxed mb-6'>
-                                    {project.description[language as 'es' | 'en-GB']}
-                                </p>
-                            </div>
-                            <div>
-                                <div className='flex flex-wrap gap-2 mb-6'>
-                                    {project.tags.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className='px-2.5 py-1 text-xs font-medium rounded-md bg-brand-text/5 text-brand-text/70'
-                                        >
-                      {tag}
-                    </span>
-                                    ))}
-                                </div>
-                                <div className='flex items-center gap-4 pt-4 border-t border-brand-text/5 text-sm font-medium'>
-                                    {project.githubUrl && (
-                                        <a
-                                            href={project.githubUrl}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            className='inline-flex items-center text-brand-text/70 hover:text-brand-primary transition-colors duration-200'
-                                        >
-                                            Code →
-                                        </a>
-                                    )}
-                                    {project.liveUrl && (
-                                        <a
-                                            href={project.liveUrl}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            className='inline-flex items-center text-brand-primary hover:text-brand-primary/80 transition-colors duration-200'
-                                        >
-                                            Live Demo ↗
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
-                        </article>
+                    {projectsData.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
                     ))}
                 </div>
             </div>
