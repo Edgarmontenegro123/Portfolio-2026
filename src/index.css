@@ -1,13 +1,38 @@
 @import "tailwindcss";
 
+@theme {
+  /* Definimos nuestras variables de color personalizadas basadas en Tailwind */
+  --color-brand-primary: var(--primary);
+  --color-brand-secondary: var(--secondary);
+  --color-brand-bg: var(--bg-main);
+  --color-brand-text: var(--text-main);
+}
+
+/* Estado por defecto: Modo Claro (Light Mode) */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #111827;
-  color: #f9fafb;
+  --primary: #2563eb;    /* Azul vibrante corporativo */
+  --secondary: #4b5563;  /* Gris neutro para textos secundarios */
+  --bg-main: #f9fafb;    /* Fondo gris ultra claro */
+  --text-main: #111827;  /* Texto casi negro para alta legibilidad */
+
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estado cuando la clase 'dark' está presente en el elemento HTML */
+.dark {
+  --primary: #60a5fa;    /* Azul brillante suave para pantallas oscuras */
+  --secondary: #9ca3af;  /* Gris claro para descripciones */
+  --bg-main: #0f172a;    /* Fondo oscuro pizarra (reemplaza al negro puro) */
+  --text-main: #f9fafb;  /* Texto blanco grisáceo para evitar fatiga visual */
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden; /* Evita desbordes horizontales no deseados en móviles */
 }
