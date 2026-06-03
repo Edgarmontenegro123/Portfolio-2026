@@ -40,7 +40,6 @@ export const Contact = () => {
             className='min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-brand-bg transition-colors duration-300'
         >
             <div className='max-w-6xl mx-auto'>
-                {/* Encabezado */}
                 <div className='text-center md:text-left mb-12'>
                     <h2 className='text-3xl font-extrabold text-brand-text sm:text-4xl tracking-tight'>
                         {language === 'es' ? 'Contacto' : 'Contact'}
@@ -49,17 +48,11 @@ export const Contact = () => {
                         {language === 'es' ? '¿Tienes un proyecto en mente? Hablemos.' : 'Have a project in mind? Let\'s talk.'}
                     </p>
                 </div>
-
-                {/* Distribución en Dos Columnas */}
                 <div className='grid gap-12 lg:grid-cols-2 items-start'>
-
-                    {/* COLUMNA IZQUIERDA: Tus Accesos Directos Originales */}
                     <div className='flex flex-col gap-5 bg-brand-text/5 p-6 rounded-2xl border border-brand-text/10'>
                         <h3 className='text-lg font-bold text-brand-text mb-2'>
                             {language === 'es' ? 'Canales Directos' : 'Direct Channels'}
                         </h3>
-
-                        {/* WhatsApp */}
                         <a
                             href={contactConstants.whatsapp}
                             target='_blank'
@@ -74,8 +67,6 @@ export const Contact = () => {
                                 <span className='text-sm font-medium'>{contactConstants.phone}</span>
                             </div>
                         </a>
-
-                        {/* Correo Electrónico */}
                         <a
                             href={contactConstants.mailRedirect}
                             className='flex items-center gap-4 p-3 rounded-xl hover:bg-brand-text/5 text-brand-text transition-colors duration-200'
@@ -88,8 +79,6 @@ export const Contact = () => {
                                 <span className='text-sm font-medium'>{contactConstants.email}</span>
                             </div>
                         </a>
-
-                        {/* LinkedIn */}
                         <a
                             href={contactConstants.linkedIn}
                             target='_blank'
@@ -104,8 +93,6 @@ export const Contact = () => {
                                 <span className='text-sm font-medium'>{contactConstants.perfilLinkedIn}</span>
                             </div>
                         </a>
-
-                        {/* GitHub */}
                         <a
                             href={contactConstants.github}
                             target='_blank'
@@ -120,8 +107,6 @@ export const Contact = () => {
                                 <span className='text-sm font-medium'>{contactConstants.perfilGithub}</span>
                             </div>
                         </a>
-
-                        {/* X / Twitter */}
                         <a
                             href={contactConstants.twitter}
                             target='_blank'
@@ -136,8 +121,6 @@ export const Contact = () => {
                                 <span className='text-sm font-medium'>@{contactConstants.perfilTwitter}</span>
                             </div>
                         </a>
-
-                        {/* Currículum PDF */}
                         <a
                             href={contactConstants.curriculumPDF}
                             target='_blank'
@@ -151,8 +134,6 @@ export const Contact = () => {
                                 <span className='text-sm'>{language === 'es' ? 'Descargar Currículum en PDF' : 'Download CV as PDF'}</span>
                             </div>
                         </a>
-
-                        {/* Lugar de Residencia */}
                         <div className='flex items-center gap-4 p-3 text-brand-text'>
                             <svg className='w-6 h-6 text-brand-secondary' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2}>
                                 <path strokeLinecap='round' strokeLinejoin='round' d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' />
@@ -164,8 +145,6 @@ export const Contact = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* COLUMNA DERECHA: Formulario De Contacto Controlado */}
                     <form
                         onSubmit={handleSubmit}
                         className='flex flex-col gap-5 p-6 rounded-2xl border border-brand-text/10 bg-brand-bg shadow-sm'
@@ -173,8 +152,6 @@ export const Contact = () => {
                         <h3 className='text-lg font-bold text-brand-text'>
                             {language === 'es' ? 'Envía un mensaje' : 'Send a Message'}
                         </h3>
-
-                        {/* Campo: Nombre */}
                         <div className='flex flex-col gap-1.5'>
                             <label htmlFor='name' className='text-xs font-semibold text-brand-secondary'>
                                 {language === 'es' ? 'Nombre Completo' : 'Full Name'}
@@ -190,8 +167,6 @@ export const Contact = () => {
                                 placeholder={language === 'es' ? 'Tu nombre...' : 'Your name...'}
                             />
                         </div>
-
-                        {/* Campo: Email */}
                         <div className='flex flex-col gap-1.5'>
                             <label htmlFor='email' className='text-xs font-semibold text-brand-secondary'>
                                 {language === 'es' ? 'Correo Electrónico' : 'Email Address'}
@@ -207,8 +182,6 @@ export const Contact = () => {
                                 placeholder='tu@email.com'
                             />
                         </div>
-
-                        {/* Campo: Mensaje */}
                         <div className='flex flex-col gap-1.5'>
                             <label htmlFor='message' className='text-xs font-semibold text-brand-secondary'>
                                 {language === 'es' ? 'Mensaje' : 'Message'}
@@ -224,8 +197,6 @@ export const Contact = () => {
                                 placeholder={language === 'es' ? 'Escribe tu mensaje acá...' : 'Write your message here...'}
                             />
                         </div>
-
-                        {/* Botón de Envío */}
                         <button
                             type='submit'
                             disabled={isLoading}
@@ -243,8 +214,6 @@ export const Contact = () => {
                                 <span>{language === 'es' ? 'Enviar Mensaje' : 'Send Message'}</span>
                             )}
                         </button>
-
-                        {/* Mensajes de Estado del Servicio */}
                         {statusMessage && (
                             <div className={`p-3 rounded-xl text-xs font-medium text-center ${
                                 statusMessage.type === 'success'
@@ -255,7 +224,6 @@ export const Contact = () => {
                             </div>
                         )}
                     </form>
-
                 </div>
             </div>
         </section>
