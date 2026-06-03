@@ -17,6 +17,12 @@ export const Navbar = () => {
         { label: t.nav.contact, href: '#contact' }
     ]
 
+    const handleScroll = (href: string) => {
+        const targetId = href.replace('#', '')
+        document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' })
+        setIsOpen(false)
+    }
+
     return (
         <nav className='fixed top-0 left-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-brand-text/10 transition-colors duration-300'>
             <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -26,13 +32,17 @@ export const Navbar = () => {
                     </div>
                     <div className='hidden md:flex items-center space-x-8'>
                         {navItems.map((item) => (
-                            <a
+                            <button
                                 key={item.href}
-                                href={item.href}
-                                className='text-brand-text/80 hover:text-brand-primary font-medium transition-colors duration-200'
+                                onClick={() => {
+                                    const targetId = item.href.replace('#', '')
+                                    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' })
+                                    if (setIsOpen) setIsOpen(false) // Si es el menú móvil, lo cierra
+                                }}
+                                className='text-brand-text/80 hover:text-brand-primary font-medium transition-colors duration-200 cursor-pointer text-left block w-full md:inline'
                             >
                                 {item.label}
-                            </a>
+                            </button>
                         ))}
                         <div className='flex items-center space-x-4 border-l border-brand-text/20 pl-4'>
                             <button
@@ -84,14 +94,13 @@ export const Navbar = () => {
             <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <div className='px-2 pt-2 pb-4 space-y-1 bg-brand-bg border-t border-brand-text/10 shadow-lg'>
                     {navItems.map((item) => (
-                        <a
+                        <button
                             key={item.href}
-                            href={item.href}
-                            onClick={() => setIsOpen(false)}
-                            className='block px-3 py-2 rounded-md text-base font-medium text-brand-text/80 hover:text-brand-primary hover:bg-brand-text/5'
+                            onClick={() => handleScroll(item.href)}
+                            className='block w-full text-left px-3 py-2 rounded-md text-base font-medium text-brand-text/80 hover:text-brand-primary hover:bg-brand-text/5 cursor-pointer'
                         >
                             {item.label}
-                        </a>
+                        </button>
                     ))}
                     <div className='pt-2 border-t border-brand-text/10 flex items-center justify-between px-3'>
                         <span className='text-sm text-brand-text/60 font-medium'>Language / Idioma:</span>
