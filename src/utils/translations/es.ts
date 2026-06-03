@@ -18,6 +18,11 @@ export const es = {
     contact: {
         title: 'Contacto',
         subtitle: '¿Tenés algún proyecto en mente? ¡Hablemos!',
+        channelsTitle: 'Canales Directos',
+        phoneLabel: 'Teléfono',
+        cvButton: 'Descargar Currículum en PDF',
+        residenceLabel: 'Residencia',
+        formTitle: 'Envía un mensaje',
         name: 'Nombre',
         email: 'Correo Electrónico',
         message: 'Mensaje',

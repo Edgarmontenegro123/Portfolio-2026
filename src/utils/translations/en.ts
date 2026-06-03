@@ -20,6 +20,11 @@ export const en: TranslationType = {
     contact: {
         title: 'Contact',
         subtitle: 'Have a project in mind? Let\'s chat!',
+        channelsTitle: 'Direct Channels',
+        phoneLabel: 'Phone',
+        cvButton: 'Download CV as PDF',
+        residenceLabel: 'Location',
+        formTitle: 'Send a Message',
         name: 'Name',
         email: 'Email Address',
         message: 'Message',

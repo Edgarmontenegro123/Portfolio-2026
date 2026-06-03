@@ -1,11 +1,13 @@
 import { useState, type SyntheticEvent } from 'react'
 import { useLanguage } from '../hooks/useLanguage'
+import { getTranslation } from '../utils/translations'
 import { contactConstants } from '../constants/contactData'
 import { sendContactMessage } from '../services/contactService.ts'
 import type { ContactFormFields } from '../types/contact'
 
 export const Contact = () => {
     const { language } = useLanguage()
+    const t = getTranslation(language)
     const [form, setForm] = useState<ContactFormFields>({ name: '', email: '', message: '' })
     const [isLoading, setIsLoading] = useState(false)
     const [statusMessage, setStatusMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
@@ -20,14 +22,14 @@ export const Contact = () => {
             if (response.success) {
                 setStatusMessage({
                     type: 'success',
-                    text: language === 'es' ? '¡Mensaje enviado con éxito!' : 'Message sent successfully!'
+                    text: t.contact.success
                 })
                 setForm({ name: '', email: '', message: '' })
             }
         } catch (error) {
             setStatusMessage({
                 type: 'error',
-                text: language === 'es' ? 'Hubo un error al enviar. Intenta de nuevo.' : 'An error occurred. Please try again.'
+                text: t.contact.error
             })
         } finally {
             setIsLoading(false)
