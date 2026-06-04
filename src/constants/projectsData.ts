@@ -27,7 +27,7 @@ export const projectsMockUp: Project[] = [
             es: 'Task Mate Evolution es una aplicación móvil desarrollada con React Native (Expo) y TypeScript, diseñada como un gestor inteligente de tareas y notas, combinando texto y grabaciones de voz dentro de una interfaz moderna, minimalista y fluida. Próximamente en Google Play y AppStore',
             'en-GB': 'Task Mate Evolution is a mobile application developed with React Native (Expo) and TypeScript, designed as an intelligent task and note manager, combining text and voice recordings within a modern, minimalist and fluid interface. Coming soon to Google Play and AppStore'
         },
-        tech: 'TypeScript, React Native, Expo SDH 54',
+        tech: 'TypeScript, React Native, Expo SDK 54',
         deploy: 'https://task-mate-by-montenegro.vercel.app/',
         gitHub: 'https://github.com/Edgarmontenegro123/task-mate-evolution'
     },
