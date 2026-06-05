@@ -56,10 +56,7 @@ export const Contact = () => {
                         {t.contact.subtitle}
                     </p>
                 </div>
-
                 <div className='grid gap-12 grid-cols-1 lg:grid-cols-2 items-stretch justify-items-stretch w-full'>
-
-                    {/* 🟢 CAJA IZQUIERDA: Fondo blanco puro en Light Mode / Slate profundo en Dark */}
                     <div className='flex flex-col w-full h-full bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-md transition-colors duration-300'>
                         <h3 className='text-lg font-bold text-brand-text mb-4'>
                             {t.contact.channelsTitle}
@@ -99,7 +96,6 @@ export const Contact = () => {
                                 rel='noopener noreferrer'
                                 className='flex items-center gap-4 p-3 rounded-xl hover:bg-blue-50/50 dark:hover:bg-slate-800 text-brand-text transition-colors duration-200'
                             >
-                                {/* 🟢 Cambiamos text-brand-text por text-slate-800 dark:text-slate-200 para garantizar contraste */}
                                 <svg className='w-6 h-6 text-slate-800 dark:text-slate-200 flex-shrink-0' viewBox='0 0 24 24' fill='currentColor'>
                                     <path fillRule='evenodd' clipRule='evenodd' d='M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.27.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z' />
                                 </svg>
@@ -114,7 +110,6 @@ export const Contact = () => {
                                 rel='noopener noreferrer'
                                 className='flex items-center gap-4 p-3 rounded-xl hover:bg-blue-50/50 dark:hover:bg-slate-800 text-brand-text transition-colors duration-200'
                             >
-                                {/* 🟢 Corregido también el contraste del ícono de X */}
                                 <svg className='w-5 h-5 mx-0.5 text-slate-800 dark:text-slate-200 flex-shrink-0' viewBox='0 0 24 24' fill='currentColor'>
                                     <path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'/>
                                 </svg>
@@ -123,8 +118,6 @@ export const Contact = () => {
                                     <span className='text-sm font-medium'>@{contactConstants.perfilTwitter}</span>
                                 </div>
                             </a>
-
-                            {/* 🟢 BOTÓN CV: Ahora tiene bg-brand-primary nativo, igualando en importancia al botón derecho */}
                             <a
                                 href={contactConstants.curriculumPDF}
                                 target='_blank'
@@ -138,8 +131,6 @@ export const Contact = () => {
                             </a>
                         </div>
                     </div>
-
-                    {/* 🟢 CAJA DERECHA: Mismo fondo limpio que equilibra el peso visual */}
                     <form
                         onSubmit={handleSubmit}
                         className='flex flex-col w-full h-full gap-5 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md transition-colors duration-300'
@@ -147,8 +138,6 @@ export const Contact = () => {
                         <h3 className='text-lg font-bold text-brand-text'>
                             {t.contact.formTitle}
                         </h3>
-
-                        {/* 🟢 INPUTS: Pasaron de ese gris feo a un celeste sutil tecnológico (bg-blue-50/40) en light mode */}
                         <div className='flex flex-col gap-1.5'>
                             <label htmlFor='name' className='text-xs font-semibold text-brand-secondary'>
                                 {language === 'es' ? 'Nombre Completo' : 'Full Name'}
@@ -164,7 +153,6 @@ export const Contact = () => {
                                 placeholder={language === 'es' ? 'Tu nombre...' : 'Your name...'}
                             />
                         </div>
-
                         <div className='flex flex-col gap-1.5'>
                             <label htmlFor='email' className='text-xs font-semibold text-brand-secondary'>
                                 {language === 'es' ? 'Correo Electrónico' : 'Email Address'}
@@ -180,7 +168,6 @@ export const Contact = () => {
                                 placeholder='tu@email.com'
                             />
                         </div>
-
                         <div className='flex flex-col gap-1.5'>
                             <label htmlFor='message' className='text-xs font-semibold text-brand-secondary'>
                                 {language === 'es' ? 'Mensaje' : 'Message'}
@@ -196,7 +183,6 @@ export const Contact = () => {
                                 placeholder={language === 'es' ? 'Escribe tu mensaje acá...' : 'Write your message here...'}
                             />
                         </div>
-
                         <button
                             type='submit'
                             disabled={isLoading}
@@ -214,7 +200,6 @@ export const Contact = () => {
                                 <span>{language === 'es' ? 'Enviar Mensaje' : 'Send Message'}</span>
                             )}
                         </button>
-
                         {statusMessage && (
                             <div className={`p-3 rounded-xl text-xs font-medium text-center ${
                                 statusMessage.type === 'success'
