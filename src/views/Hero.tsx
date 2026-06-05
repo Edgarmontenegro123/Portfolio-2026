@@ -26,7 +26,7 @@ export const Hero = () => {
                             {t.hero.role}
                         </p>
                     </div>
-                    <p className='text-base sm:text-lg text-brand-text/80 max-w-2xl leading-relaxed transition-colors duration-300'>
+                    <p className='text-base sm:text-lg text-brand-text max-w-2xl leading-relaxed transition-colors duration-300'>
                         {t.hero.description}
                     </p>
                     <div className='flex flex-wrap gap-4 justify-center md:justify-start pt-2'>

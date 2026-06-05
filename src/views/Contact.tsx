@@ -32,6 +32,7 @@ export const Contact = () => {
                 })
             }
         } catch (error) {
+            console.error('Contact submission error:', error);
             setStatusMessage({
                 type: 'error',
                 text: t.contact.error
@@ -49,10 +50,10 @@ export const Contact = () => {
             <div className='max-w-6xl mx-auto'>
                 <div className='text-center md:text-left mb-12'>
                     <h2 className='text-3xl font-extrabold text-brand-text sm:text-4xl tracking-tight'>
-                        {language === 'es' ? 'Contacto' : 'Contact'}
+                        {t.contact.title}
                     </h2>
                     <p className='mt-3 text-xl text-brand-secondary max-w-2xl'>
-                        {language === 'es' ? '¿Tienes un proyecto en mente? Hablemos.' : 'Have a project in mind? Let\'s talk.'}
+                        {t.contact.subtitle}
                     </p>
                 </div>
                 <div className='grid gap-12 lg:grid-cols-2 items-start'>
@@ -135,7 +136,7 @@ export const Contact = () => {
                         className='flex flex-col gap-5 p-6 rounded-2xl border border-brand-text/10 bg-brand-bg shadow-sm'
                     >
                         <h3 className='text-lg font-bold text-brand-text'>
-                            {language === 'es' ? 'Envía un mensaje' : 'Send a Message'}
+                            {t.contact.formTitle}
                         </h3>
                         <div className='flex flex-col gap-1.5'>
                             <label htmlFor='name' className='text-xs font-semibold text-brand-secondary'>
