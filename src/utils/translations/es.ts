@@ -12,8 +12,9 @@ export const es = {
     projects: {
         title: 'Mis Proyectos',
         subtitle: 'Una selección de mis trabajos más recientes',
-        viewCode: 'Ver Código',
-        liveDemo: 'Demo en Vivo'
+        technologiesUsed: 'Para realizarla se utilizaron tecnologías como:',
+        viewCode: 'Observa el Código acá!',
+        liveDemo: 'Prueba la App acá!'
     },
     contact: {
         title: 'Contacto',

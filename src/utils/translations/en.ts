@@ -14,8 +14,9 @@ export const en: TranslationType = {
     projects: {
         title: 'My Projects',
         subtitle: 'A selection of my most recent work',
-        viewCode: 'View Code',
-        liveDemo: 'Live Demo'
+        technologiesUsed: 'Built using technologies such as:',
+        viewCode: 'Check out the Code here!',
+        liveDemo: 'Try the App here!'
     },
     contact: {
         title: 'Contact',
