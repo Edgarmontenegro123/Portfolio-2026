@@ -46,7 +46,7 @@ export const Hero = () => {
                 </div>
                 <div className='flex-shrink-0 relative group animate-fade-in-delayed'>
                     <div
-                        className='absolute -inset-1 rounded-full bg-gradient-to-r from-brand-primary to-purple-600 blur opacity-30 group-hover:opacity-50 transition duration-300'></div>
+                        className='absolute -inset-1 rounded-full bg-gradient-to-r from-brand-primary to-blue-500 blur opacity-30 group-hover:opacity-40 transition duration-300'></div>
                     <div
                         className='relative w-48 h-48 sm:w-56 sm:h-56 rounded-full bg-brand-text/5 border-2 border-brand-primary/20 flex items-center justify-center overflow-hidden shadow-inner bg-linear-to-b from-brand-primary/10 to-transparent'>
                         <img
