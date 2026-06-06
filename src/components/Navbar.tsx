@@ -14,6 +14,7 @@ export const Navbar = () => {
     const navItems = [
         { label: t.nav.about, href: '#about' },
         { label: t.nav.projects, href: '#projects' },
+        { label: language === 'es' ? 'Tecnologías' : 'Skills', href: '#skills' },
         { label: t.nav.contact, href: '#contact' }
     ]
 
@@ -112,7 +113,7 @@ export const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+            <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <div className='px-2 pt-2 pb-4 space-y-1 bg-brand-bg border-t border-brand-text/10 shadow-lg'>
                     {navItems.map((item) => (
                         <button

@@ -4,6 +4,7 @@ export const en: TranslationType = {
     nav: {
         about: 'About Me',
         projects: 'Projects',
+        skills: 'Technologies',
         contact: 'Contact'
     },
     hero: {

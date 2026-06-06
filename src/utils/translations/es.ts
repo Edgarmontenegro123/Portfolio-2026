@@ -2,6 +2,7 @@ export const es = {
     nav: {
         about: 'Sobre Mí',
         projects: 'Proyectos',
+        skills: 'Tecnologías',
         contact: 'Contacto'
     },
     hero: {

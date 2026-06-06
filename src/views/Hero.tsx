@@ -37,6 +37,12 @@ export const Hero = () => {
                             {language === 'es' ? 'Ver Proyectos' : 'View Projects'}
                         </button>
                         <button
+                            onClick={() => document.getElementById('skills')?.scrollIntoView({behavior: 'smooth'})}
+                            className='px-6 py-3 text-sm font-semibold rounded-lg border border-brand-text/20 text-brand-text hover:bg-brand-text/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer'
+                        >
+                            {language === 'es' ? 'Tecnologías' : 'Skills'}
+                        </button>
+                        <button
                             onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
                             className='px-6 py-3 text-sm font-semibold rounded-lg border border-brand-text/20 text-brand-text hover:bg-brand-text/5 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer'
                         >
