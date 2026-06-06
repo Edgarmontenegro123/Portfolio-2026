@@ -14,7 +14,7 @@ export const ProjectCard = ({project}: ProjectCardProps) => {
 
     return (
         <div
-            className='flex flex-col rounded-2xl bg-brand-bg border border-brand-text/10 shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl'>
+            className='relative z-10 isolate transform-gpu will-change-transform flex flex-col rounded-2xl bg-brand-bg border border-brand-text/10 shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl'>
             <div className='flex items-center gap-4 p-4 border-b border-brand-text/5'>
                 <img
                     src={project.avatar}
@@ -35,7 +35,7 @@ export const ProjectCard = ({project}: ProjectCardProps) => {
             </div>
             <div className='flex flex-col w-full'>
                 <div
-                    className='flex items-center justify-between px-4 py-3 bg-brand-text/5/20 border-b border-brand-text/5'>
+                    className='flex items-center justify-between px-4 py-3 bg-brand-text/5 border-b border-brand-text/5'>
                     <a
                         href={project.video}
                         target='_blank'
