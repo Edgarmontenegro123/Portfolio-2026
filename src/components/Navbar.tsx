@@ -125,7 +125,6 @@ export const Navbar = () => {
                         </button>
                     ))}
                     <div className='pt-2 border-t border-brand-text/10 flex items-center justify-between px-3'>
-                        <span className='text-sm text-brand-text/60 font-medium'>Language / Idioma:</span>
                         <button
                             onClick={() => {
                                 setLanguage(language === 'es' ? 'en-GB' : 'es')
@@ -133,7 +132,7 @@ export const Navbar = () => {
                             }}
                             className='px-3 py-1 font-bold rounded border border-brand-text/30 text-sm'
                         >
-                            {language === 'es' ? '🇬🇧 English' : '🇪🇸 Español'}
+                            {language === 'es' ? 'English' : 'Español'}
                         </button>
                     </div>
                 </div>

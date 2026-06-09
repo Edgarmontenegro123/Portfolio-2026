@@ -9,7 +9,7 @@ export const Hero = () => {
     return (
         <section
             id='about'
-            className='min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 bg-brand-bg transition-colors duration-300'
+            className='min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 bg-transparent transition-colors duration-300'
         >
             <div
                 className='max-w-4xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12'>

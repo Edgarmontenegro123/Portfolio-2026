@@ -10,10 +10,10 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  --primary: #2563eb;
-  --secondary: #4b5563;
-  --bg-main: #f8fafc;
-  --text-main: #0f172a;
+  --primary: rgb(37, 99, 235);
+  --secondary: rgb(75, 85, 99);
+  --bg-main: rgb(248, 250, 252);
+  --text-main: rgb(15, 23, 42);
 
   font-family: 'Inter', system-ui, sans-serif;
   background-color: var(--bg-main);
@@ -23,10 +23,10 @@
 }
 
 .dark {
-  --primary: #3b82f6;
-  --secondary: #9ca3af;
-  --bg-main: #0f172a;
-  --text-main: #f1f5f9;
+  --primary: rgb(59, 130, 246);
+  --secondary: rgb(156, 163, 175);
+  --bg-main: rgb(15, 23, 42);
+  --text-main: rgb(241, 245, 249);
 }
 
 body {
@@ -35,4 +35,19 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-color: var(--bg-main);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
