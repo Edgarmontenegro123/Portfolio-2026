@@ -61,18 +61,18 @@ export const Projects = () => {
                                     alt='Project Logo'
                                     className='w-8 h-8 object-contain rounded-md'
                                 />
-                                <span className='text-xs font-bold text-brand-text pr-1'>
+                                <span className='text-sm font-bold text-brand-text pr-1'>
                                     {language === 'es' ? currentProject.date.es : currentProject.date['en-GB']}
                                 </span>
                             </div>
                         </div>
                         <div
                             className='md:col-span-6 p-6 sm:p-8 flex flex-col justify-between h-full bg-white/40 dark:bg-slate-950/40'>
-                            <div className='space-y-4'>
-                                <h3 className='text-2xl font-bold text-brand-text tracking-tight'>
+                            <div className='space-y-10'>
+                                <h3 className='text-3xl font-bold text-brand-text tracking-tight'>
                                     {currentProject.title}
                                 </h3>
-                                <p className='text-sm sm:text-base text-brand-secondary leading-relaxed line-clamp-5 md:line-clamp-none'>
+                                <p className='text-sm sm:text-base text-brand-secondary leading-relaxed md:line-clamp-none'>
                                     {language === 'es' ? currentProject.description.es : currentProject.description['en-GB']}
                                 </p>
                             </div>
@@ -81,7 +81,7 @@ export const Projects = () => {
                                     {techBadges.map((badge, idx) => (
                                         <span
                                             key={idx}
-                                            className='text-xs font-semibold px-2.5 py-1 rounded-md bg-blue-500/5 text-brand-primary border border-brand-primary/10 transition-colors dark:bg-brand-primary/10 dark:text-blue-400'
+                                            className='text-sm font-semibold px-4.5 py-2.5 rounded-md bg-blue-500/5 text-brand-primary border border-brand-primary/10 transition-colors dark:bg-brand-primary/10 dark:text-blue-400'
                                         >
                                             {badge}
                                         </span>

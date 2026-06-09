@@ -24,8 +24,16 @@ export const projectsMockUp: Project[] = [
         img: GifTaskMateEvolution,
         video: 'https://vimeo.com/manage/videos/1135584450',
         description: {
-            es: 'Task Mate Evolution es una aplicación móvil desarrollada con React Native (Expo) y TypeScript, diseñada como un gestor inteligente de tareas y notas, combinando texto y grabaciones de voz dentro de una interfaz moderna, minimalista y fluida. Próximamente en Google Play y AppStore',
-            'en-GB': 'Task Mate Evolution is a mobile application developed with React Native (Expo) and TypeScript, designed as an intelligent task and note manager, combining text and voice recordings within a modern, minimalist and fluid interface. Coming soon to Google Play and AppStore'
+            es: 'Task Mate Evolution es una aplicación móvil nativa desarrollada con React Native (Expo) y TypeScript, diseñada como un gestor inteligente ' +
+                'de tareas y notas de alto rendimiento. La plataforma revoluciona la productividad al integrar de forma fluida la carga de texto tradicional ' +
+                'con un avanzado sistema de grabaciones de voz y almacenamiento local persistente. Su arquitectura está optimizada con un enfoque "Offline-First", ' +
+                'garantizando un funcionamiento fluido, seguro y sin interrupciones incluso en entornos sin conectividad. Presenta una interfaz moderna, minimalista' +
+                ' y con transiciones de alta fidelidad, actualmente adaptada para su próximo despliegue en las tiendas oficiales de Google Play y Apple App Store.',
+            'en-GB': 'Task Mate Evolution is a native mobile application built with React Native (Expo) and TypeScript, designed as a high-performance, ' +
+                'intelligent task and note manager. The platform revolutionises productivity by seamlessly integrating traditional text input with an advanced ' +
+                'voice recording system and persistent local storage. Its architecture is fully optimised with an "Offline-First" approach, ensuring a fluid, ' +
+                'secure and uninterrupted user experience even in environments without network connectivity. Featuring a modern, minimalist interface with ' +
+                'high-fidelity transitions, the application is currently tailored for its upcoming deployment on the official Google Play and Apple App Store.'
         },
         tech: 'TypeScript, React Native, Expo SDK 54',
         deploy: 'https://task-mate-by-montenegro.vercel.app/',
@@ -59,8 +67,10 @@ export const projectsMockUp: Project[] = [
         img: GifHealthier,
         video: 'https://vimeo.com/manage/videos/586633960',
         description: {
-            es: 'Con una interfaz muy intuitiva, que permite comprar productos saludables, ordenarlos por precio, por categoría, incluirlos en una wishlist o llevarlos a un carrito de compra donde se permite terminar el proceso de compra mediante una pasarela de pagos.',
-            'en-GB': 'Featuring a highly intuitive interface that allows users to purchase healthy products, sort them by price or category, add them to a wishlist, or place them in a shopping cart to complete the checkout process via a payment gateway.'
+            es: 'Con una interfaz muy intuitiva, que permite comprar productos saludables, ordenarlos por precio, por categoría, incluirlos en una wishlist o ' +
+                'llevarlos a un carrito de compra donde se permite terminar el proceso de compra mediante una pasarela de pagos.',
+            'en-GB': 'Featuring a highly intuitive interface that allows users to purchase healthy products, sort them by price or category, add them to a wishlist, ' +
+                'or place them in a shopping cart to complete the checkout process via a payment gateway.'
         },        tech: 'React, Redux, Material UI, NodeJS, PostgreSQL',
         deploy: 'https://Healthier.vercel.app',
         gitHub: 'https://github.com/Healthier-Group/Healthier'
@@ -76,8 +86,10 @@ export const projectsMockUp: Project[] = [
         img: GifClimApp,
         video: 'https://vimeo.com/manage/videos/586698718',
         description: {
-            es: 'Esta es una App con una interfaz amigable, que muestra la hora y la fecha detallada del lugar donde te encuentres, con un buscador intuitivo, para que elijas tus ciudades favoritas y en ellas puedas observar los datos climáticos más relevantes.',
-            'en-GB': 'This is an app with a user-friendly interface that displays the detailed time and date of your location, featuring an intuitive search tool to select your favourite cities and view their most relevant weather data.'
+            es: 'Esta es una App con una interfaz amigable, que muestra la hora y la fecha detallada del lugar donde te encuentres, con un buscador intuitivo, ' +
+                'para que elijas tus ciudades favoritas y en ellas puedas observar los datos climáticos más relevantes.',
+            'en-GB': 'This is an app with a user-friendly interface that displays the detailed time and date of your location, featuring an intuitive search ' +
+                'tool to select your favourite cities and view their most relevant weather data.'
         },        tech: 'JavaScript, React, Material UI, HTML5, CSS3',
         deploy: 'https://climappmontenegro.vercel.app',
         gitHub: 'https://github.com/Edgarmontenegro123/ClimApp'
@@ -93,8 +105,10 @@ export const projectsMockUp: Project[] = [
         img: GifTaskMate,
         video: 'https://vimeo.com/manage/videos/1010457455',
         description: {
-            es: 'Esta es una App con una interfaz amigable, que permite agregar notas o tareas, modificarlas, separarlas por colores, organizarlas con un simple arrastre, eliminar las tareas completadas y guardarlas en tu dispositivo entre otras funcionalidades.',
-            'en-GB': 'This is an app with a friendly interface that lets you add notes or tasks, modify them, colour-code them, organise them with a simple drag-and-drop, delete completed tasks, and save them on your device among other features.'
+            es: 'Esta es una App con una interfaz amigable, que permite agregar notas o tareas, modificarlas, separarlas por colores, organizarlas con un ' +
+                'simple arrastre, eliminar las tareas completadas y guardarlas en tu dispositivo entre otras funcionalidades.',
+            'en-GB': 'This is an app with a friendly interface that lets you add notes or tasks, modify them, colour-code them, organise them with a ' +
+                'simple drag-and-drop, delete completed tasks, and save them on your device among other features.'
         },        tech: 'Typescript, React, NextJs, Tailwind, HTML5, CSS3',
         deploy: 'https://task-mate-by-montenegro.vercel.app/',
         gitHub: 'https://github.com/Edgarmontenegro123/task-mate'
@@ -110,8 +124,10 @@ export const projectsMockUp: Project[] = [
         img: GifYoutubeChallenge,
         video: 'https://vimeo.com/manage/videos/586698718',
         description: {
-            es: 'Esta es una App con una interfaz amigable, que permite ingresar una URL de Youtube en un buscador intuitivo, que trae el título del video, la cantidad de views y sus comentarios.',
-            'en-GB': 'This is an app with a friendly interface that allows users to enter a YouTube URL into an intuitive search bar, fetching the video title, view count, and its comments.'
+            es: 'Esta es una App con una interfaz amigable, que permite ingresar una URL de Youtube en un buscador intuitivo, que trae el título del video, la ' +
+                'cantidad de views y sus comentarios.',
+            'en-GB': 'This is an app with a friendly interface that allows users to enter a YouTube URL into an intuitive search bar, fetching the video title, ' +
+                'view count, and its comments.'
         },        tech: 'JavaScript, React, Sass, HTML5, CSS3, Youtube API, Express',
         deploy: 'https://challenge-youtube.vercel.app/',
         gitHub: 'https://github.com/Edgarmontenegro123/challenge-youtube'
