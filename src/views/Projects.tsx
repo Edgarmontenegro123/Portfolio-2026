@@ -10,7 +10,7 @@ export const Projects = () => {
     return (
         <section
             id='projects'
-            className='relative z-10 min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-brand-bg transition-colors duration-300'
+            className='relative z-10 min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-brand-bg/40 transition-colors duration-300'
         >
             <div className='max-w-6xl mx-auto'>
                 <div className='text-center md:text-left mb-12'>
