@@ -2,7 +2,7 @@ import { FaWhatsapp, FaLinkedin, FaGithub, FaXTwitter } from 'react-icons/fa6'
 
 export const contactConstants = {
     whatsapp: 'https://wa.link/8x2m0y',
-    phone: '+54 911 62101137',
+    phone: '+54 9 11 6210 1137',
     mailRedirect: 'mailto:edgarmontenegro321@gmail.com',
     email: 'edgarmontenegro321@gmail.com',
     linkedIn: 'https://www.linkedin.com/in/edgarmontenegro/',

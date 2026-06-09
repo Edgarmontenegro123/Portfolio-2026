@@ -77,7 +77,6 @@ export const Contact = () => {
                                         >
                                             <Icon className={`w-6 h-6 ${channel.color} opacity-85 transition-all duration-300 group-hover:opacity-100 group-hover:scale-110`} />
                                             <div>
-                                                {language === 'es' ? channel.labelEs : channel.labelEn}
                                                 <span className='text-sm font-medium'>{channel.value}</span>
                                             </div>
                                         </a >
