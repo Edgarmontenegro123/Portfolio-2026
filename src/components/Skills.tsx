@@ -1,9 +1,9 @@
 import { useLanguage } from '../hooks/useLanguage'
 import {
-    FaHtml5, FaCss3Alt, FaSass, FaBootstrap, FaReact, FaNodeJs, FaGolang, FaGitAlt, FaGithub, FaGitlab
+    FaHtml5, FaCss3Alt, FaSass, FaBootstrap, FaReact, FaNodeJs, FaGolang, FaGitAlt, FaGithub, FaGitlab, FaDocker
 } from 'react-icons/fa6'
 import {
-    SiTailwindcss, SiJavascript, SiTypescript, SiExpress, SiVercel
+    SiTailwindcss, SiJavascript, SiTypescript, SiExpress, SiVercel, SiPostgresql, SiNetlify, SiRender, SiRailway
 } from 'react-icons/si'
 
 export const Skills = () => {
@@ -28,7 +28,8 @@ export const Skills = () => {
             skills: [
                 { name: 'Go', icon: FaGolang, color: 'text-[#00ADD8]', glow: 'hover:shadow-[#00ADD8]/20 hover:border-[#00ADD8]/40' },
                 { name: 'Node.js', icon: FaNodeJs, color: 'text-[#339933]', glow: 'hover:shadow-[#339933]/20 hover:border-[#339933]/40' },
-                { name: 'Express', icon: SiExpress, color: 'text-brand-text dark:text-white', glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30' }
+                { name: 'Express', icon: SiExpress, color: 'text-brand-text dark:text-white', glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30' },
+                { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-600 dark:text-blue-400', glow: 'hover:shadow-blue-500/10 hover:border-blue-500/30'}
             ]
         },
         {
@@ -42,7 +43,11 @@ export const Skills = () => {
         {
             title: language === 'es' ? 'Despliegue / Cloud' : 'Deployment / Cloud',
             skills: [
-                { name: 'Vercel', icon: SiVercel, color: 'text-brand-text dark:text-white', glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30' }
+                { name: 'Vercel', icon: SiVercel, color: 'text-brand-text dark:text-white', glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30' },
+                { name: 'Netlify', icon: SiNetlify, color: 'text-teal-500 dark:text-teal-400', glow: 'hover:shadow-teal-500/10 hover:border-teal-500/30'},
+                { name: 'Docker', icon: FaDocker, color: 'text-sky-500 dark:text-sky-400', glow: 'hover:shadow-sky-500/10 hover:border-sky-500/30'},
+                { name: 'Render', icon: SiRender, color: 'text-brand-text dark:text-white', glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30'},
+                { name: 'Railway', icon: SiRailway, color: 'text-brand-text dark:text-white', glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30'}
             ]
         }
     ]
