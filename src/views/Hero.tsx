@@ -46,19 +46,15 @@ export const Hero = () => {
                         <h1 className='text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-text transition-colors duration-300'>
                             Edgar Montenegro
                         </h1>
-
-                        {/* Contenedor con altura protegida para evitar Layout Shift */}
                         <div className='min-h-[40px] flex items-center justify-center md:justify-start'>
                             <p className='text-xl sm:text-2xl font-bold text-brand-secondary transition-colors duration-300 inline-block pr-1 animate-cursor-blink whitespace-nowrap font-mono'>
                                 {currentText}
                             </p>
                         </div>
                     </div>
-
                     <p className='text-base sm:text-lg text-brand-text max-w-2xl leading-relaxed transition-colors duration-300'>
                         {t.hero.description}
                     </p>
-
                     <div className='flex flex-wrap gap-4 justify-center md:justify-start pt-2'>
                         <button
                             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
@@ -80,15 +76,22 @@ export const Hero = () => {
                         </button>
                     </div>
                 </div>
-
                 <div className='flex-shrink-0 relative group animate-fade-in-delayed'>
-                    <div className='absolute -inset-1 rounded-full bg-gradient-to-r from-brand-primary to-blue-500 blur opacity-30 group-hover:opacity-40 transition duration-300'></div>
-                    <div className='relative w-48 h-48 sm:w-56 sm:h-56 rounded-full bg-brand-text/5 border-2 border-brand-primary/20 flex items-center justify-center overflow-hidden shadow-inner bg-linear-to-b from-brand-primary/10 to-transparent'>
-                        <img
-                            src={profileImage}
-                            alt="Edgar Montenegro"
-                            className='w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out'
+                    <div className='absolute -inset-1 rounded-full bg-brand-primary/20 blur-md opacity-50 group-hover:opacity-75 transition duration-500'></div>
+                    <div className='relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-[2px] overflow-hidden flex items-center justify-center shadow-lg bg-slate-200 dark:bg-slate-800'>
+                        <div
+                            className='absolute inset-[-50%] animate-border-spin'
+                            style={{
+                                background: 'conic-gradient(from 0deg, transparent 0%, #3b82f6 20%, #8b5cf6 50%, #ec4899 80%, transparent 100%)'
+                            }}
                         />
+                        <div className='relative w-full h-full rounded-full bg-brand-bg flex items-center justify-center overflow-hidden'>
+                            <img
+                                src={profileImage}
+                                alt="Edgar Montenegro"
+                                className='w-full h-full object-cover transform group-hover:scale-103 transition-transform duration-500 ease-in-out'
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
