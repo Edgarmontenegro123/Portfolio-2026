@@ -37,6 +37,15 @@ body {
   background-color: var(--bg-main);
 }
 
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.animate-cursor-blink {
+  border-right: 3px solid #2563eb;
+  animation: blink 0.75s step-end infinite;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
