@@ -62,7 +62,7 @@ body {
 }
 
 @theme {
-  --animate-border-spin: border-rotate 8s linear infinite;
+  --animate-border-spin: border-rotate 7s linear infinite;
 
   @keyframes border-rotate {
     from {
