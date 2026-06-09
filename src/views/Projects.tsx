@@ -46,14 +46,14 @@ export const Projects = () => {
                         key={currentProject.id}
                         className='grid grid-cols-1 md:grid-cols-12 w-full bg-white/60 dark:bg-slate-950/60 rounded-2xl border border-slate-100 dark:border-slate-800/80 shadow-xl overflow-hidden min-h-[460px] animate-fade-in-up backdrop-blur-sm'                    >
                         <div
-                            className='relative md:col-span-6 bg-slate-100 dark:bg-slate-900/50 flex items-center justify-center overflow-hidden min-h-[260px] md:min-h-full group'>
+                            className='relative md:col-span-6 bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden min-h-[260px] md:min-h-full group p-8 border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-800 transition-colors duration-300'>
                             <img
                                 src={currentProject.img}
                                 alt={currentProject.title}
-                                className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-105'
+                                className='max-w-full max-h-full object-contain rounded-xl shadow-md transition-transform duration-700 group-hover:scale-102'
                             />
                             <div
-                                className='absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent'/>
+                                className='absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent pointer-events-none'/>
                             <div
                                 className='absolute top-4 left-4 flex items-center gap-3 bg-white/90 dark:bg-slate-900/90 p-2 rounded-xl border border-brand-text/5 shadow-md backdrop-blur-sm'>
                                 <img
