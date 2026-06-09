@@ -40,24 +40,25 @@ export const Navbar = () => {
                             {'<EM.dev/>'}
                         </button>
                     </div>
-                    <div className='hidden md:flex items-center space-x-8'>
-                        {navItems.map((item) => (
-                            <button
-                                key={item.href}
-                                onClick={() => {
-                                    const targetId = item.href.replace('#', '')
-                                    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' })
-                                    if (setIsOpen) setIsOpen(false) // Si es el menú móvil, lo cierra
-                                }}
-                                className='whitespace-nowrap text-brand-text/80 hover:text-brand-primary font-medium transition-colors duration-200 cursor-pointer text-left block w-full md:inline'
-                            >
-                                {item.label}
-                            </button>
-                        ))}
-                        <div className='flex items-center space-x-4 border-l border-brand-text/20 pl-4'>
+                    <div className='flex items-center space-x-4 md:space-x-8'>
+                        <div className='hidden md:flex items-center space-x-8'>
+                            {navItems.map((item) => (
+                                <button
+                                    key={item.href}
+                                    onClick={() => {
+                                        const targetId = item.href.replace('#', '')
+                                        document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' })
+                                    }}
+                                    className='whitespace-nowrap text-brand-text/80 hover:text-brand-primary font-medium transition-colors duration-200 cursor-pointer text-left block w-full md:inline'
+                                >
+                                    {item.label}
+                                </button>
+                            ))}
+                        </div>
+                        <div className='flex items-center space-x-2 sm:space-x-4 border-none md:border-l md:border-brand-text/20 md:pl-4'>
                             <button
                                 onClick={() => setLanguage(language === 'es' ? 'en-GB' : 'es')}
-                                className='px-3 py-2 text-xs font-bold rounded border border-brand-text/10 text-brand-text/80 hover:border-brand-primary hover:text-brand-primary transition-all duration-200 cursor-pointer'
+                                className='px-2.5 py-1.5 text-xs font-bold rounded border border-brand-text/10 text-brand-text/80 hover:border-brand-primary hover:text-brand-primary transition-all duration-200 cursor-pointer shadow-sm'
                                 title={language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
                             >
                                 {language === 'es' ? 'ENG' : 'ESP'}
@@ -68,36 +69,21 @@ export const Navbar = () => {
                                 aria-label='Toggle theme'
                             >
                                 {theme === 'dark' ? (
-                                    <svg className='w-7 h-7' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                                    <svg className='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
                                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}
                                               d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.001 0z' />
                                     </svg>
                                 ) : (
-                                    <svg className='w-7 h-7' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                                    <svg className='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
                                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}
                                               d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' />
                                     </svg>
                                 )}
                             </button>
                         </div>
-                    </div>
-                    <div className='md:hidden flex items-center space-x-3'>
-                        <button onClick={toggleTheme} className='p-2 text-brand-text/80'>
-                            {theme === 'dark' ? (
-                                <svg className='w-5 h-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-                                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}
-                                          d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.001 0z' />
-                                </svg>
-                            ) : (
-                                <svg className='w-5 h-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-                                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}
-                                          d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' />
-                                </svg>
-                            )}
-                        </button>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className='p-2 rounded-md text-brand-text hover:text-brand-primary focus:outline-none'
+                            className='md:hidden p-2 rounded-md text-brand-text hover:text-brand-primary focus:outline-none transition-colors'
                             aria-label='Toggle menu'
                         >
                             {isOpen ? (
@@ -110,6 +96,7 @@ export const Navbar = () => {
                                 </svg>
                             )}
                         </button>
+
                     </div>
                 </div>
             </div>
@@ -124,17 +111,6 @@ export const Navbar = () => {
                             {item.label}
                         </button>
                     ))}
-                    <div className='pt-2 border-t border-brand-text/10 flex items-center justify-between px-3'>
-                        <button
-                            onClick={() => {
-                                setLanguage(language === 'es' ? 'en-GB' : 'es')
-                                setIsOpen(false)
-                            }}
-                            className='px-3 py-1 font-bold rounded border border-brand-text/30 text-sm'
-                        >
-                            {language === 'es' ? 'English' : 'Español'}
-                        </button>
-                    </div>
                 </div>
             </div>
         </nav>
