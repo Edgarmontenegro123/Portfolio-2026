@@ -9,12 +9,34 @@ export const Projects = () => {
     const t = getTranslation(language)
     const [currentIndex, setCurrentIndex] = useState(0)
 
+    const [touchStartX, setTouchStartX] = useState<number | null>(null)
+
     const nextProject = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % projectsMockUp.length)
     }
 
     const prevProject = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + projectsMockUp.length) % projectsMockUp.length)
+    }
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStartX(e.touches[0].clientX)
+    }
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (touchStartX === null) return
+
+        const touchEndX = e.changedTouches[0].clientX
+        const diffX = touchStartX - touchEndX // Distancia recorrida
+
+        // El umbral de 50px es para asegurarse de que fue un swipe intencional y no un tap casual
+        if (diffX > 50) {
+            nextProject() // Deslizó a la izquierda -> Siguiente
+        } else if (diffX < -50) {
+            prevProject() // Deslizó a la derecha -> Anterior
+        }
+
+        setTouchStartX(null) // Reseteamos el estado
     }
 
     const currentProject = projectsMockUp[currentIndex]
@@ -44,13 +66,16 @@ export const Projects = () => {
                     </button>
                     <div
                         key={currentProject.id}
-                        className='grid grid-cols-1 md:grid-cols-12 w-full bg-white/60 dark:bg-slate-950/60 rounded-2xl border border-slate-100 dark:border-slate-800/80 shadow-xl overflow-hidden min-h-[460px] animate-fade-in-up backdrop-blur-sm'                    >
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+                        className='grid grid-cols-1 md:grid-cols-12 w-full bg-white/60 dark:bg-slate-950/60 rounded-2xl border border-slate-100 dark:border-slate-800/80 shadow-xl overflow-hidden min-h-[460px] animate-fade-in-up backdrop-blur-sm cursor-grab active:cursor-grabbing'
+                    >
                         <div
                             className='relative md:col-span-6 bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden min-h-[260px] md:min-h-full group p-8 border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-800 transition-colors duration-300'>
                             <img
                                 src={currentProject.img}
                                 alt={currentProject.title}
-                                className='max-w-full max-h-full object-contain rounded-xl shadow-md transition-transform duration-700 group-hover:scale-102'
+                                className='max-w-full max-h-full object-contain rounded-xl shadow-md transition-transform duration-700 group-hover:scale-102 pointer-events-none'
                             />
                             <div
                                 className='absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent pointer-events-none'/>
@@ -61,18 +86,18 @@ export const Projects = () => {
                                     alt='Project Logo'
                                     className='w-8 h-8 object-contain rounded-md'
                                 />
-                                <span className='text-sm font-bold text-brand-text pr-1'>
+                                <span className='text-xs font-bold text-brand-text pr-1'>
                                     {language === 'es' ? currentProject.date.es : currentProject.date['en-GB']}
                                 </span>
                             </div>
                         </div>
                         <div
                             className='md:col-span-6 p-6 sm:p-8 flex flex-col justify-between h-full bg-white/40 dark:bg-slate-950/40'>
-                            <div className='space-y-10'>
-                                <h3 className='text-3xl font-bold text-brand-text tracking-tight'>
+                            <div className='flex flex-col space-y-6'>
+                                <h3 className='text-2xl font-bold text-brand-text tracking-tight'>
                                     {currentProject.title}
                                 </h3>
-                                <p className='text-sm sm:text-base text-brand-secondary leading-relaxed md:line-clamp-none'>
+                                <p className='mt-1 text-sm sm:text-base text-brand-secondary leading-relaxed'>
                                     {language === 'es' ? currentProject.description.es : currentProject.description['en-GB']}
                                 </p>
                             </div>
@@ -81,7 +106,7 @@ export const Projects = () => {
                                     {techBadges.map((badge, idx) => (
                                         <span
                                             key={idx}
-                                            className='text-sm font-semibold px-4.5 py-2.5 rounded-md bg-blue-500/5 text-brand-primary border border-brand-primary/10 transition-colors dark:bg-brand-primary/10 dark:text-blue-400'
+                                            className='text-sm font-semibold px-3.5 py-1.5 rounded-md bg-blue-500/5 text-brand-primary border border-brand-primary/20 transition-colors dark:bg-brand-primary/10 dark:text-blue-400 dark:border-brand-primary/30 shadow-sm'
                                         >
                                             {badge}
                                         </span>
