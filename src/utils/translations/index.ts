@@ -1,6 +1,6 @@
 import { es } from './es'
 import { en } from './en'
-import type { Language } from '../../context/LanguageContext'
+import type { Language } from '../../context/LanguageContextInstance'
 
 export const translations = {
     es,

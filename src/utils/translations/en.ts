@@ -10,7 +10,8 @@ export const en: TranslationType = {
     hero: {
         greeting: "Hi, I'm",
         role: '<Software Developer />',
-        description: 'Software development student focused on building modern, efficient and modular web applications. Passionate about clean architecture and industry best practices.'
+        description: 'Software development student focused on building modern, efficient and modular web applications. Passionate about clean architecture ' +
+            'and industry best practices.'
     },
     projects: {
         title: 'My Projects',

@@ -8,7 +8,8 @@ export const es = {
     hero: {
         greeting: 'Hola, soy',
         role: '<Desarrollador de Software />',
-        description: 'Estudiante de desarrollo de software enfocado en la creación de aplicaciones web modernas, eficientes y modulares. Apasionado por la arquitectura limpia y las buenas prácticas.'
+        description: 'Estudiante de desarrollo de software enfocado en la creación de aplicaciones web modernas, eficientes y modulares. Apasionado por ' +
+            'la arquitectura limpia y las buenas prácticas.'
     },
     projects: {
         title: 'Mis Proyectos',
