@@ -17,18 +17,16 @@ export const Hero = () => {
         const typewriterInterval = setInterval(() => {
             if (index < targetText.length) {
                 currentString += targetText.charAt(index)
-                // 🟢 Al estar empaquetado exclusivamente dentro del callback asíncrono del intervalo,
-                // React lo procesa de forma segura fuera del hilo síncrono de montaje.
                 setCurrentText(currentString)
                 index++
             } else {
                 clearInterval(typewriterInterval)
             }
-        }, 100) // Velocidad de tipeo uniforme
+        }, 100)
 
         return () => {
             clearInterval(typewriterInterval)
-            setCurrentText('') // Limpieza segura al desmontar
+            setCurrentText('')
         }
     }, [targetText])
 
@@ -47,7 +45,8 @@ export const Hero = () => {
                             Edgar Montenegro
                         </h1>
                         <div className='min-h-[40px] flex items-center justify-center md:justify-start'>
-                            <p className='text-xl sm:text-2xl font-bold text-brand-secondary transition-colors duration-300 inline-block pr-1 animate-cursor-blink whitespace-nowrap font-mono'>
+                            <p className='text-xl sm:text-2xl font-bold text-brand-secondary transition-colors duration-300 inline-block pr-1
+                                          animate-cursor-blink whitespace-nowrap font-mono'>
                                 {currentText}
                             </p>
                         </div>
@@ -58,19 +57,22 @@ export const Hero = () => {
                     <div className='flex flex-wrap gap-4 justify-center md:justify-start pt-2'>
                         <button
                             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                            className='px-6 py-3 text-sm font-semibold rounded-lg bg-brand-primary text-white hover:bg-brand-primary/90 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 cursor-pointer'
+                            className='px-6 py-3 text-sm font-semibold rounded-lg bg-brand-primary text-white hover:bg-brand-primary/90
+                                       shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 cursor-pointer'
                         >
                             {language === 'es' ? 'Ver Proyectos' : 'View Projects'}
                         </button>
                         <button
                             onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
-                            className='px-6 py-3 text-sm font-semibold rounded-lg border border-brand-text/20 text-brand-text hover:bg-brand-text/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer'
+                            className='px-6 py-3 text-sm font-semibold rounded-lg border border-brand-text/20 text-brand-text hover:bg-brand-text/10
+                                       hover:-translate-y-0.5 transition-all duration-200 cursor-pointer'
                         >
                             {language === 'es' ? 'Tecnologías' : 'Skills'}
                         </button>
                         <button
                             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                            className='px-6 py-3 text-sm font-semibold rounded-lg border border-brand-text/20 text-brand-text hover:bg-brand-text/5 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer'
+                            className='px-6 py-3 text-sm font-semibold rounded-lg border border-brand-text/20 text-brand-text hover:bg-brand-text/5
+                                       hover:-translate-y-0.5 transition-all duration-200 cursor-pointer'
                         >
                             {t.nav.contact}
                         </button>
@@ -78,7 +80,8 @@ export const Hero = () => {
                 </div>
                 <div className='flex-shrink-0 relative group animate-fade-in-delayed'>
                     <div className='absolute -inset-1 rounded-full bg-brand-primary/20 blur-md opacity-50 group-hover:opacity-75 transition duration-500'></div>
-                    <div className='relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-[2px] overflow-hidden flex items-center justify-center shadow-lg bg-slate-200 dark:bg-slate-800'>
+                    <div className='relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-[2px] overflow-hidden flex items-center justify-center shadow-lg
+                                  bg-slate-200 dark:bg-slate-800'>
                         <div
                             className='absolute inset-[-50%] animate-border-spin'
                             style={{

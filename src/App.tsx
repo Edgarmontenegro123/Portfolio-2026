@@ -1,9 +1,9 @@
-import { Navbar } from './components/Navbar'
-import { Hero } from './views/Hero'
-import { Projects } from './views/Projects'
-import { Skills } from './components/Skills'
-import { Contact } from './views/Contact'
-import { ParticlesBackground } from './components/ParticlesBackground'
+import {Navbar} from './components/Navbar'
+import {Hero} from './views/Hero'
+import {Projects} from './views/Projects'
+import {Skills} from './components/Skills'
+import {Contact} from './views/Contact'
+import {ParticlesBackground} from './components/ParticlesBackground'
 
 function App() {
     return (

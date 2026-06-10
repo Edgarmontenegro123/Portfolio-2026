@@ -1,13 +1,13 @@
-import { useState, type SyntheticEvent } from 'react'
-import { useLanguage } from '../hooks/useLanguage'
-import { getTranslation } from '../utils/translations'
-import { contactConstants, CONTACT_CHANNELS_CONFIG } from '../constants/contactData'
-import { sendContactMessage } from '../services/contactService.ts'
-import type { ContactFormFields } from '../types/contact'
-import { FaArrowDown } from 'react-icons/fa6'
+import {useState, type SyntheticEvent} from 'react'
+import {useLanguage} from '../hooks/useLanguage'
+import {getTranslation} from '../utils/translations'
+import {contactConstants, CONTACT_CHANNELS_CONFIG} from '../constants/contactData'
+import type {ContactFormFields} from '../types/contact'
+import {sendContactMessage} from '../services/contactService'
+import {FaArrowDown} from 'react-icons/fa6'
 
 export const Contact = () => {
-    const { language } = useLanguage()
+    const {language} = useLanguage()
     const t = getTranslation(language)
     const [form, setForm] = useState<ContactFormFields>({ name: '', email: '', message: '' })
     const [isLoading, setIsLoading] = useState(false)
@@ -43,7 +43,6 @@ export const Contact = () => {
         }
     }
 
-
     return (
         <section
             id='contact'
@@ -59,7 +58,8 @@ export const Contact = () => {
                     </p>
                 </div>
                 <div className='grid gap-12 grid-cols-1 lg:grid-cols-2 items-stretch justify-items-stretch w-full'>
-                    <div className='flex flex-col w-full h-full bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-md transition-colors duration-300'>
+                    <div className='flex flex-col w-full h-full bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100
+                                  dark:border-slate-800 shadow-md transition-colors duration-300'>
                         <h3 className='text-lg font-bold text-brand-text mb-4'>
                             {t.contact.channelsTitle}
                         </h3>
@@ -73,9 +73,13 @@ export const Contact = () => {
                                             href={channel.href}
                                             target='_blank'
                                             rel='noopener noreferrer'
-                                            className={`flex items-center gap-4 p-3 rounded-xl border border-transparent bg-slate-50/50 dark:bg-slate-800/30 text-brand-text transition-all duration-300 transform-gpu hover:-translate-y-0.5 hover:shadow-md ${channel.glow} group`}
+                                            className={`flex items-center gap-4 p-3 rounded-xl border border-transparent bg-slate-50/50 
+                                                      dark:bg-slate-800/30 text-brand-text transition-all duration-300 transform-gpu 
+                                                        hover:-translate-y-0.5 hover:shadow-md ${channel.glow} group`}
                                         >
-                                            <Icon className={`w-6 h-6 ${channel.color} opacity-85 transition-all duration-300 group-hover:opacity-100 group-hover:scale-110`} />
+                                            <Icon
+                                                className={`w-6 h-6 ${channel.color} opacity-85 transition-all duration-300 group-hover:opacity-100 
+                                                            group-hover:scale-110`} />
                                             <div>
                                                 <span className='text-sm font-medium'>{channel.value}</span>
                                             </div>
@@ -87,7 +91,8 @@ export const Contact = () => {
                                 href={contactConstants.curriculumPDF}
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                className='flex items-center justify-center gap-2 py-3 px-4 mt-4 rounded-xl font-bold text-white bg-brand-primary hover:bg-brand-primary/90 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer shadow-md text-sm'
+                                className='flex items-center justify-center gap-2 py-3 px-4 mt-4 rounded-xl font-bold text-white bg-brand-primary
+                                           hover:bg-brand-primary/90 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer shadow-md text-sm'
                             >
                                 <FaArrowDown className='w-4 h-4' />
                                 <span>{language === 'es' ? 'Descargar Currículum en PDF' : 'Download CV as PDF'}</span>
@@ -96,7 +101,8 @@ export const Contact = () => {
                     </div>
                     <form
                         onSubmit={handleSubmit}
-                        className='flex flex-col w-full h-full gap-5 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md transition-colors duration-300'
+                        className='flex flex-col w-full h-full gap-5 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white
+                                 dark:bg-slate-900 shadow-md transition-colors duration-300'
                     >
                         <h3 className='text-lg font-bold text-brand-text'>
                             {t.contact.formTitle}
@@ -112,7 +118,9 @@ export const Contact = () => {
                                 disabled={isLoading}
                                 value={form.name}
                                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                                className='w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-blue-50/40 dark:bg-slate-800/50 text-brand-text placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all disabled:opacity-50 text-sm'
+                                className='w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-blue-50/40
+                                         dark:bg-slate-800/50 text-brand-text placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none
+                                           focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all disabled:opacity-50 text-sm'
                                 placeholder={language === 'es' ? 'Tu nombre...' : 'Your name...'}
                             />
                         </div>
@@ -127,7 +135,9 @@ export const Contact = () => {
                                 disabled={isLoading}
                                 value={form.email}
                                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                                className='w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-blue-50/40 dark:bg-slate-800/50 text-brand-text placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all disabled:opacity-50 text-sm'
+                                className='w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-blue-50/40
+                                         dark:bg-slate-800/50 text-brand-text placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none
+                                           focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all disabled:opacity-50 text-sm'
                                 placeholder='tu@email.com'
                             />
                         </div>
@@ -142,20 +152,27 @@ export const Contact = () => {
                                 disabled={isLoading}
                                 value={form.message}
                                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                                className='w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-blue-50/40 dark:bg-slate-800/50 text-brand-text placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all disabled:opacity-50 resize-none text-sm'
+                                className='w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-blue-50/40
+                                         dark:bg-slate-800/50 text-brand-text placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none
+                                           focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all disabled:opacity-50
+                                           resize-none text-sm'
                                 placeholder={language === 'es' ? 'Escribe tu mensaje acá...' : 'Write your message here...'}
                             />
                         </div>
                         <button
                             type='submit'
                             disabled={isLoading}
-                            className='w-full mt-2 py-3 px-4 rounded-xl font-bold text-white bg-brand-primary hover:bg-brand-primary/90 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm shadow-md'
+                            className='w-full mt-2 py-3 px-4 rounded-xl font-bold text-white bg-brand-primary hover:bg-brand-primary/90 transition-all
+                                       cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm shadow-md'
                         >
                             {isLoading ? (
                                 <>
                                     <svg className='animate-spin h-5 w-5 text-white' fill='none' viewBox='0 0 24 24'>
                                         <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' />
-                                        <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z' />
+                                        <path className='opacity-75'
+                                              fill='currentColor'
+                                              d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042
+                                                1.135 5.824 3 7.938l3-2.647z' />
                                     </svg>
                                     <span>{language === 'es' ? 'Enviando...' : 'Sending...'}</span>
                                 </>
