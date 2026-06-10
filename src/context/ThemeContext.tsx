@@ -1,12 +1,6 @@
-import { createContext, useState, useEffect } from 'react'
-import type { ReactNode } from 'react'
-
-export interface ThemeContextType {
-    theme: 'light' | 'dark'
-    toggleTheme: () => void
-}
-
-export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+import {useState, useEffect} from 'react'
+import type {ReactNode} from 'react'
+import {ThemeContext} from './ThemeContextInstance'
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     // Inicializamos el estado buscando si el usuario ya tenía una preferencia guardada
