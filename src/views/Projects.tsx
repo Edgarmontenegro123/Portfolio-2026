@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import React, { useState } from 'react'
 import {useLanguage} from '../hooks/useLanguage'
 import {getTranslation} from '../utils/translations'
 import {projectsMockUp} from '../constants/projectsData'
@@ -9,6 +9,10 @@ export const Projects = () => {
     const t = getTranslation(language)
     const [currentIndex, setCurrentIndex] = useState(0)
     const [direction, setDirection] = useState<'next' | 'prev'>('next')
+    const [touchStart, setTouchStart] = useState<number | null>(null)
+    const [touchEnd, setTouchEnd] = useState<number | null>(null)
+
+    const minSwipeDistance = 50
 
     const nextProject = () => {
         setDirection('next')
@@ -18,6 +22,29 @@ export const Projects = () => {
     const prevProject = () => {
         setDirection('prev')
         setCurrentIndex((prevIndex) => (prevIndex - 1 + projectsMockUp.length) % projectsMockUp.length)
+    }
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null) // Reseteamos por seguridad
+        setTouchStart(e.targetTouches[0].clientX)
+    }
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX)
+    }
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return
+
+        const distance = touchStart - touchEnd
+        const isLeftSwipe = distance > minSwipeDistance
+        const isRightSwipe = distance < -minSwipeDistance
+
+        if (isLeftSwipe) {
+            nextProject() // Deslizó hacia la izquierda -> Siguiente
+        } else if (isRightSwipe) {
+            prevProject() // Deslizó hacia la derecha -> Anterior
+        }
     }
 
     const currentProject = projectsMockUp[currentIndex]
@@ -57,7 +84,11 @@ export const Projects = () => {
                     >
                         <FaChevronLeft className='w-5 h-5'/>
                     </button>
-                    <div className='w-full overflow-hidden py-4 -my-4 px-1'>
+                    <div className='w-full overflow-hidden py-4 -my-4 px-1 touch-pan-y'
+                         onTouchStart={handleTouchStart}
+                         onTouchMove={handleTouchMove}
+                         onTouchEnd={handleTouchEnd}
+                    >
                         <div
                             key={`${currentProject.id}-${direction}`}
                             className={`grid grid-cols-1 md:grid-cols-12 w-full bg-white/60 dark:bg-slate-950/60 rounded-2xl border border-slate-100 dark:border-slate-800/80 shadow-xl overflow-hidden min-h-[460px] backdrop-blur-sm transform-gpu ${
