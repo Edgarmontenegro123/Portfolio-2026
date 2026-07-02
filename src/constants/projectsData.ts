@@ -1,4 +1,6 @@
 import type { Project } from '../types/project'
+import LogoBasketStats from '../assets/Images/basketStatsLogo.png'
+import GifBasketStats from '../assets/Images/gifBasketStats.gif'
 import LogoTaskMateEvolution from '../assets/Images/taskMateEvolutionLogo.png'
 import LogoQuizUp from '../assets/Images/quizUpLogo.png'
 import LogoClimApp from '../assets/Images/sunnyCloud.png'
@@ -11,10 +13,28 @@ import GifClimApp from '../assets/Images/gifClimApp.gif'
 import GifHealthier from '../assets/Images/gifHealthier.gif'
 import GifTaskMate from '../assets/Images/gifTaskMate.gif'
 import GifYoutubeChallenge from '../assets/Images/gifYoutubeChallenge.gif'
-
+/*gifBasketStats*/
 export const projectsMockUp: Project[] = [
     {
         id: 0,
+        avatar: LogoBasketStats,
+        title: 'Basket Stats',
+        date: {
+            es: 'Junio 2026',
+            'en-GB': 'June 2026'
+        },
+        img: GifBasketStats,
+        video: 'https://vimeo.com/1206319207',
+        description: {
+            es: 'Plataforma integral para la gestión y análisis de estadísticas de básquetbol. Incluye un panel de administración para el manejo de datos, APIs dedicadas para el procesamiento analítico y un frontend intuitivo para visualizar el rendimiento de los equipos y jugadores.',
+            'en-GB': 'Comprehensive platform for managing and analysing basketball statistics. It features an administration panel for data management, dedicated APIs for analytical processing, and an intuitive frontend to visualise team and player performance.'
+        },
+        tech: 'TypeScript, React, Node.js, Express, PostgreSQL',
+        deploy: 'https://basket-stats-frontend.vercel.app/',
+        gitHub: 'https://github.com/Edgarmontenegro123/basket-stats-frontend'
+    },
+    {
+        id: 1,
         avatar: LogoTaskMateEvolution,
         title: 'Task Mate Evolution!',
         date: {
@@ -40,7 +60,7 @@ export const projectsMockUp: Project[] = [
         gitHub: 'https://github.com/Edgarmontenegro123/task-mate-evolution'
     },
     {
-        id: 1,
+        id: 2,
         avatar: LogoQuizUp,
         title: 'QuizUp!',
         date: {
@@ -57,7 +77,7 @@ export const projectsMockUp: Project[] = [
         gitHub: 'https://github.com/Edgarmontenegro123/quizup'
     },
     {
-        id: 4,
+        id: 5,
         avatar: LogoHealthier,
         title: 'Healthier',
         date: {
@@ -76,7 +96,7 @@ export const projectsMockUp: Project[] = [
         gitHub: 'https://github.com/Healthier-Group/Healthier'
     },
     {
-        id: 3,
+        id: 4,
         avatar: LogoClimApp,
         title: 'ClimApp',
         date: {
@@ -95,7 +115,7 @@ export const projectsMockUp: Project[] = [
         gitHub: 'https://github.com/Edgarmontenegro123/ClimApp'
     },
     {
-        id: 2,
+        id: 3,
         avatar: LogoTaskMate,
         title: 'Task Mate',
         date: {
@@ -114,7 +134,7 @@ export const projectsMockUp: Project[] = [
         gitHub: 'https://github.com/Edgarmontenegro123/task-mate'
     },
     {
-        id: 5,
+        id: 6,
         avatar: LogoYoutube,
         title: 'Youtube-Challenge',
         date: {
