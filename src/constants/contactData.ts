@@ -23,7 +23,7 @@ export const CONTACT_CHANNELS_CONFIG = [
         value: contactConstants.phone,
         icon: FaWhatsapp,
         color: 'text-[#25D366]',
-        glow: 'hover:shadow-[#25D366]/10 hover:border-[#25D366]/30'
+        glow: 'hover:shadow-[#25D366]/10 hover:border-[#25D366]/30 max-md:shadow-[#25D366]/10 max-md:border-[#25D366]/30'
     },
     {
         href: contactConstants.linkedIn,
@@ -32,7 +32,7 @@ export const CONTACT_CHANNELS_CONFIG = [
         value: contactConstants.perfilLinkedIn,
         icon: FaLinkedin,
         color: 'text-[#0077B5]',
-        glow: 'hover:shadow-[#0077B5]/10 hover:border-[#0077B5]/30'
+        glow: 'hover:shadow-[#0077B5]/10 hover:border-[#0077B5]/30 max-md:shadow-[#0077B5]/10 max-md:border-[#0077B5]/30'
     },
     {
         href: contactConstants.github,
@@ -41,7 +41,7 @@ export const CONTACT_CHANNELS_CONFIG = [
         value: contactConstants.perfilGithub,
         icon: FaGithub,
         color: 'text-brand-text dark:text-white',
-        glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30'
+        glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30 max-md:shadow-brand-text/10 max-md:border-brand-text/30'
     },
     {
         href: contactConstants.twitter,
@@ -50,6 +50,6 @@ export const CONTACT_CHANNELS_CONFIG = [
         value: `@${contactConstants.perfilTwitter}`,
         icon: FaXTwitter,
         color: 'text-brand-text dark:text-white',
-        glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30'
+        glow: 'hover:shadow-brand-text/10 hover:border-brand-text/30 max-md:shadow-brand-text/10 max-md:border-brand-text/30'
     }
 ]

@@ -74,8 +74,11 @@ export const Contact = () => {
                                             target='_blank'
                                             rel='noopener noreferrer'
                                             className={`flex items-center gap-4 p-3 rounded-xl border border-transparent bg-slate-50/50 
-                                                      dark:bg-slate-800/30 text-brand-text transition-all duration-300 transform-gpu 
-                                                        hover:-translate-y-0.5 hover:shadow-md ${channel.glow} group`}
+                                                        dark:bg-slate-800/30 text-brand-text transition-all duration-300 transform-gpu 
+                                                        /* MOBILE: Sombra fija suave | DESKTOP: Sin sombra base, activa en hover */
+                                                        hover:-translate-y-0.5 shadow-sm md:shadow-none md:hover:shadow-md 
+                                                        ${channel.glow} group`
+                                            }
                                         >
                                             <Icon
                                                 className={`w-6 h-6 ${channel.color} opacity-85 transition-all duration-300 group-hover:opacity-100 
