@@ -26,6 +26,21 @@ export const Navbar = () => {
 
     return (
         <nav className='fixed top-0 left-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-brand-text/10 transition-colors duration-300'>
+            <div className='absolute bottom-0 left-0 w-full h-[2px] overflow-hidden'>
+                <div
+                    className='h-full w-[25%]'
+                    style={{
+                        background: 'linear-gradient(90deg, transparent 0%, #3b82f6 30%, #8b5cf6 50%, #ec4899 70%, transparent 100%)',
+                        animation: 'slide 5s linear infinite'
+                    }}
+                />
+            </div>
+            <style>{`
+        @keyframes slide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(500%); }
+        }
+    `}</style>
             <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='flex items-center justify-between h-16'>
                     <div className='flex-shrink-0 font-bold text-xl tracking-tight text-brand-primary'>
