@@ -91,8 +91,7 @@ export const Contact = () => {
                                 })}
                             </div>
                             <a
-                                href={contactConstants.curriculumPDF}
-                                target='_blank'
+                                href={language === 'es' ? contactConstants.curriculumES : contactConstants.curriculumEN}                                target='_blank'
                                 rel='noopener noreferrer'
                                 className='flex items-center justify-center gap-2 py-3 px-4 mt-4 rounded-xl font-bold text-white bg-brand-primary
                                            hover:bg-brand-primary/90 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer shadow-md text-sm'

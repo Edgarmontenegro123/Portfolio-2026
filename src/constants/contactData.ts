@@ -11,7 +11,8 @@ export const contactConstants = {
     perfilGithub: 'Edgarmontenegro123',
     twitter: 'https://twitter.com/MontenegroCode',
     perfilTwitter: 'MontenegroCode',
-    curriculumPDF: 'https://drive.google.com/file/d/1BZgSkVU47Wwh7zIzllldf5WWYODy-xWY/view?usp=sharing',
+    curriculumES: 'https://drive.google.com/file/d/16aFAzfMu6tCF84bbOpsOXta8PYYOlPhj/view?usp=sharing',
+    curriculumEN: 'https://drive.google.com/file/d/100_AH1lUtrRDUM-_fkSgt92RlnHaDQ9j/view?usp=sharing',
     home: 'https://www.google.com/maps/place/Palermo,+CABA/'
 }
 
