@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {useLanguage} from '../hooks/useLanguage'
 import {getTranslation} from '../utils/translations'
-import {projectsMockUp} from '../constants/projectsData'
+import projectsMockUp from '../constants/projectsData'
 import {FaGithub, FaArrowUpRightFromSquare, FaChevronLeft, FaChevronRight, FaPlay} from 'react-icons/fa6'
 
 export const Projects = () => {
@@ -103,7 +103,9 @@ export const Projects = () => {
                                            overflow-hidden min-h-[260px] md:min-h-full group'>
                                 <img
                                     src={currentProject.img}
-                                    alt={currentProject.title}
+                                    alt={language === 'es'
+                                        ? currentProject.title.es
+                                        : currentProject.title['en-GB']}
                                     className='w-full h-full object-contain p-4 bg-slate-950/5 dark:bg-slate-950/20 transition-transform duration-700
                                               group-hover:scale-102'/>
                                 <div
@@ -125,7 +127,9 @@ export const Projects = () => {
                                 className='md:col-span-6 p-6 sm:p-8 flex flex-col justify-between h-full bg-white/40 dark:bg-slate-950/40'>
                                 <div className='space-y-4'>
                                     <h3 className='text-3xl font-bold text-brand-text tracking-tight'>
-                                        {currentProject.title}
+                                        {language === 'es'
+                                            ? currentProject.title.es
+                                            : currentProject.title['en-GB']}
                                     </h3>
                                     <div className='pt-6'>
                                         <p className='text-sm sm:text-base text-brand-secondary leading-relaxed md:line-clamp-none'>
