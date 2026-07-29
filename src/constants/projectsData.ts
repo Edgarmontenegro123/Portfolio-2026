@@ -1,12 +1,15 @@
 import LogoTaskMateEvolution from '../assets/Images/taskMateEvolutionLogo.png'
+import LogoBasketStats from '../assets/Images/basketStatsLogo.png'
 import LogoGordoniLtd from '../assets/Images/GordoniLtdLogo.png'
 import LogoQuizUp from '../assets/Images/quizUpLogo.png'
 import LogoClimApp from '../assets/Images/sunnyCloud.png'
 import LogoHealthier from '../assets/Images/healthier.png'
 import LogoTaskMate from '../assets/Images/tasksLogo.png'
 import LogoYoutube from '../assets/Images/youtubeLogo.png'
-
+import LogoHeroverse from '../assets/Images/heroverseLogo.png'
 import GifTaskMateEvolution from '../assets/Images/gifTaskMateEvolution.gif'
+import GifBasketStats from '../assets/Images/gifBasketStats.gif'
+import GifHeroVerse from '../assets/Images/Heroverse.gif'
 import GifGordoniLtd from '../assets/Images/GifGordoniLtd.gif'
 import GifQuizUp from '../assets/Images/gifQuizUp.gif'
 import GifClimApp from '../assets/Images/gifClimApp.gif'
@@ -46,6 +49,58 @@ const ProjectsMockUp: Project[] = [
 
     {
         id: 1,
+        avatar: LogoBasketStats,
+        title: {
+            es: 'Basket Stats',
+            'en-GB': 'Basket Stats'
+        },
+        date: {
+            es: 'Junio 2026',
+            'en-GB': 'June 2026'
+        },
+        img: GifBasketStats,
+        resume: {
+            es: 'Plataforma cloud para la gestión integral de equipos de baloncesto, procesamiento automático de estadísticas y análisis de rendimiento mediante una arquitectura de microservicios.',
+            'en-GB': 'Cloud platform for comprehensive basketball team management, automated statistics processing and performance analytics through a microservices architecture.'
+        },
+        video: 'https://vimeo.com/1206319207?share=copy&fl=sv&fe=ci',
+        description: {
+            es: 'Basket Stats es una aplicación web desarrollada con React, TypeScript y Node.js que centraliza la gestión de equipos, jugadores, temporadas y partidos. Gracias a su arquitectura de microservicios, procesa automáticamente estadísticas desde archivos PDF, genera rankings, compara equipos y ofrece paneles analíticos con datos reales.',
+            'en-GB': 'Basket Stats is a web application built with React, TypeScript and Node.js that centralises the management of basketball teams, players, seasons and games. Its microservices architecture automatically processes statistics from PDF files, generates rankings, compares teams and provides analytical dashboards based on real match data.'
+        },
+        tech: 'React, TypeScript, Node.js, Express, PostgreSQL, Supabase, JWT, Recharts, Vite',
+        deploy: 'https://basket-stats-frontend.vercel.app/',
+        gitHub: 'https://github.com/Edgarmontenegro123/basket-stats-frontend'
+    },
+
+    {
+        id: 2,
+        avatar: LogoHeroverse,
+        title: {
+            es: 'HeroVerse Multiverse',
+            'en-GB': 'HeroVerse Multiverse'
+        },
+        date: {
+            es: 'Julio 2026',
+            'en-GB': 'July 2026'
+        },
+        img: GifHeroVerse,
+        resume: {
+            es: 'HeroVerse Multiverse es un explorador y comparador intergaláctico de superhéroes con simulador de batallas en tiempo real.',
+            'en-GB': 'HeroVerse Multiverse is an intergalactic superhero explorer and comparator with real-time battle simulation.'
+        },
+        video: 'https://vimeo.com/1213792304?share=copy&fl=sv&fe=ci',
+        description: {
+            es: 'HeroVerse Multiverse es una aplicación web interactiva desarrollada con React 18, TypeScript y Node.js (BFF). Permite buscar con debounce, filtrar y comparar superhéroes y villanos por sus Powerstats, armar un equipo personalizado de favoritos y simular combates en tiempo real mediante un motor dinámico con relato de batallas bilingüe.',
+            'en-GB': 'HeroVerse Multiverse is an interactive web application built with React 18, TypeScript, and a Node.js BFF. It enables debounced searching, filtering, and comparing superheroes and villains by Powerstats, building a custom dream team, and simulating real-time multiverse battles with a dynamic bilingual battle log.'
+        },
+        tech: 'React 18, TypeScript, Node.js (BFF), Express, Axios, Custom CSS3',
+        deploy: 'https://heroverse-frontend-chi.vercel.app/',
+        gitHub: 'https://github.com/Edgarmontenegro123/heroverse-frontend'
+    },
+
+    {
+        id: 3,
         avatar: LogoGordoniLtd,
         title: {
             es: 'Gordoni Limited',
@@ -71,7 +126,7 @@ const ProjectsMockUp: Project[] = [
     },
 
     {
-        id: 2,
+        id: 4,
         avatar: LogoQuizUp,
         title: {
             es: 'QuizUp!',
@@ -97,7 +152,7 @@ const ProjectsMockUp: Project[] = [
     },
 
     {
-        id: 3,
+        id: 5,
         avatar: LogoClimApp,
         title: {
             es: 'ClimApp',
@@ -123,7 +178,7 @@ const ProjectsMockUp: Project[] = [
     },
 
     {
-        id: 4,
+        id: 6,
         avatar: LogoHealthier,
         title: {
             es: 'Healthier',
@@ -149,7 +204,7 @@ const ProjectsMockUp: Project[] = [
     },
 
     {
-        id: 5,
+        id: 7,
         avatar: LogoTaskMate,
         title: {
             es: 'Task Mate',
@@ -175,7 +230,7 @@ const ProjectsMockUp: Project[] = [
     },
 
     {
-        id: 6,
+        id: 8,
         avatar: LogoYoutube,
         title: {
             es: 'Youtube-Challenge',
