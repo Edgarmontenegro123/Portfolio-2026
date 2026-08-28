@@ -4,6 +4,7 @@ import LogoGordoniLtd from '../assets/Images/GordoniLtdLogo.png'
 import LogoQuizUp from '../assets/Images/quizUpLogo.png'
 import LogoClimApp from '../assets/Images/sunnyCloud.png'
 import LogoHealthier from '../assets/Images/healthier.png'
+import LogoSummarify from '../assets/Images/Summarify_logo.svg'
 import LogoTaskMate from '../assets/Images/tasksLogo.png'
 import LogoYoutube from '../assets/Images/youtubeLogo.png'
 import LogoHeroverse from '../assets/Images/heroverseLogo.png'
@@ -14,6 +15,7 @@ import GifGordoniLtd from '../assets/Images/GifGordoniLtd.gif'
 import GifQuizUp from '../assets/Images/gifQuizUp.gif'
 import GifClimApp from '../assets/Images/gifClimApp.gif'
 import GifHealthier from '../assets/Images/gifHealthier.gif'
+import GifSummarify from '../assets/Images/Summarify(1).gif'
 import GifTaskMate from '../assets/Images/gifTaskMate.gif'
 import GifYoutubeChallenge from '../assets/Images/gifYoutubeChallenge.gif'
 
@@ -127,6 +129,32 @@ const ProjectsMockUp: Project[] = [
 
     {
         id: 4,
+        avatar: LogoSummarify,
+        title: {
+            es: 'Summarify',
+            'en-GB': 'Summarify'
+        },
+        date: {
+            es: 'Agosto 2026',
+            'en-GB': 'August 2026'
+        },
+        img: GifSummarify,
+        resume: {
+            es: 'Aplicación PWA inteligente de extracción y resumen de textos/PDFs desarrollada mediante asistencia avanzada de IA con Claude Code CLI.',
+            'en-GB': 'Intelligent PWA for text/PDF extraction and summarisation developed with advanced AI assistance using Claude Code CLI.'
+        },
+        video: 'https://vimeo.com/1221981764?share=copy&fl=sv&fe=ci',
+        description: {
+            es: 'Summarify es una PWA bilingüe (ES/EN) construida bajo arquitectura AI-Assisted con Claude Code CLI. Permite procesar textos y PDFs para generar resúmenes breves o detallados, cuenta con historial persistente, búsqueda por palabras clave, filtrado por idioma, funcionalidad Text-to-Speech, temas claro/oscuro y soporte offline completísimo.',
+            'en-GB': 'Summarify is a bilingual (ES/EN) PWA built under an AI-Assisted architecture with Claude Code CLI. It allows processing texts and PDFs to generate brief or detailed summaries, featuring persistent history, keyword search, language filtering, Text-to-Speech, light/dark themes, and full offline capabilities.'
+        },
+        tech: 'React, TypeScript, Node.js, Claude Code CLI, PWA, Tailwind CSS',
+        deploy: 'https://summarify-app.vercel.app/',
+        gitHub: 'https://github.com/Edgarmontenegro123/summarify'
+    },
+
+    {
+        id: 5,
         avatar: LogoQuizUp,
         title: {
             es: 'QuizUp!',
@@ -152,7 +180,7 @@ const ProjectsMockUp: Project[] = [
     },
 
     {
-        id: 5,
+        id: 6,
         avatar: LogoClimApp,
         title: {
             es: 'ClimApp',
@@ -178,7 +206,7 @@ const ProjectsMockUp: Project[] = [
     },
 
     {
-        id: 6,
+        id: 7,
         avatar: LogoHealthier,
         title: {
             es: 'Healthier',
@@ -204,7 +232,7 @@ const ProjectsMockUp: Project[] = [
     },
 
     {
-        id: 7,
+        id: 8,
         avatar: LogoTaskMate,
         title: {
             es: 'Task Mate',
@@ -230,7 +258,7 @@ const ProjectsMockUp: Project[] = [
     },
 
     {
-        id: 8,
+        id: 9,
         avatar: LogoYoutube,
         title: {
             es: 'Youtube-Challenge',
