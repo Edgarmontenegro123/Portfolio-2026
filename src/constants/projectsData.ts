@@ -71,7 +71,7 @@ const ProjectsMockUp: Project[] = [
             'en-GB': 'Basket Stats is a web application built with React, TypeScript and Node.js that centralises the management of basketball teams, players, seasons and games. Its microservices architecture automatically processes statistics from PDF files, generates rankings, compares teams and provides analytical dashboards based on real match data.'
         },
         tech: 'React, TypeScript, Node.js, Express, PostgreSQL, Supabase, JWT, Recharts, Vite',
-        deploy: 'https://basket-stats-frontend.vercel.app/',
+        deploy: 'https://147.15.10.181.nip.io/dashboard',
         gitHub: 'https://github.com/Edgarmontenegro123/basket-stats-frontend'
     },
 
